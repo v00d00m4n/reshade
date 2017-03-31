@@ -1052,6 +1052,7 @@ namespace reshade::d3d11
 
 	void d3d11_runtime::detect_depth_source()
 	{
+		/**
 		static int cooldown = 0, traffic = 0;
 
 		if (cooldown-- > 0)
@@ -1074,10 +1075,11 @@ namespace reshade::d3d11
 				traffic = 0;
 			}
 		}
+		*/
 
 		const std::lock_guard<std::mutex> lock(_mutex);
 
-		if (_is_multisampling_enabled || _depth_source_table.empty())
+		if (_depth_source_table.empty())
 		{
 			return;
 		}
