@@ -848,6 +848,7 @@ namespace reshade::opengl
 
 	void opengl_runtime::detect_depth_source()
 	{
+		/**
 		static int cooldown = 0, traffic = 0;
 
 		if (cooldown-- > 0)
@@ -871,6 +872,7 @@ namespace reshade::opengl
 				traffic = 0;
 			}
 		}
+		*/
 
 		GLuint best_match = 0;
 		depth_source_info best_info = { 0, 0, 0, GL_NONE };

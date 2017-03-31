@@ -1032,6 +1032,7 @@ namespace reshade::d3d10
 
 	void d3d10_runtime::detect_depth_source()
 	{
+		/**
 		static int cooldown = 0, traffic = 0;
 
 		if (cooldown-- > 0)
@@ -1054,8 +1055,9 @@ namespace reshade::d3d10
 				traffic = 0;
 			}
 		}
+		*/
 
-		if (_is_multisampling_enabled || _depth_source_table.empty())
+		if (_depth_source_table.empty())
 		{
 			return;
 		}
